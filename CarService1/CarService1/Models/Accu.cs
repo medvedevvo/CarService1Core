@@ -7,18 +7,21 @@ namespace CarService1.Models
 {
     public class AccuListWithTime
     {
-        public int idCar = 1;
+        private DBObjects dBObjects = DBObjects.getInstance();
+        public int idCar;
         public int time = 0;
         public List<Accu> accu;
 
         public AccuListWithTime(int time, List<Accu> accu)
         {
+            idCar = dBObjects.IdCar;
             this.time = time;
             this.accu = accu;
         }
 
         public AccuListWithTime(int time, Accu accu)
         {
+            idCar = dBObjects.IdCar;
             this.time = time;
             if(accu != null)
             {

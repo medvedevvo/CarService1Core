@@ -9,6 +9,7 @@ namespace CarService1.Models
     public class DBObjects
     {
         private static DBObjects instance;                              // Ссылка на текущий объект
+        public int IdCar = 1;
         public List<RealObject> objects_list = new List<RealObject>();  // Список объектов
 
         //--- Конструктор класса (внутренний) -------------------------------------------------------------------------
