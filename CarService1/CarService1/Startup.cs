@@ -43,14 +43,14 @@ namespace CarService1
         {
             double rand = (rng.NextDouble() - 0.5);
             double val = 12.3 + rand;
-            string s = val.ToString().Replace('.', ',');
-            s = s.Remove(s.IndexOf(',') + 4).Replace(',', '.');
+            string s = (val.ToString()).Replace(',', '.');
+            s = s.Remove(s.IndexOf('.') + 4);
             dbObj.objects_list[id].parameters[0].val = s;
 
             rand = (rng.NextDouble() - 0.5);
             val = 5.0 + rand;
-            s = val.ToString().Replace('.', ',');
-            s = s.Remove(s.IndexOf(',') + 4).Replace(',', '.');
+            s = (val.ToString()).Replace(',', '.');
+            s = s.Remove(s.IndexOf('.') + 4);
             dbObj.objects_list[id].parameters[1].val = s;
 
             s = dbObj.objects_list[2].parameters[2].val;
